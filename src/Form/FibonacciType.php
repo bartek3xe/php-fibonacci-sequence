@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\Range;
 
 class FibonacciType extends AbstractType
 {
@@ -20,7 +21,13 @@ class FibonacciType extends AbstractType
                 'choices' => FibonacciEnumType::FIBONACCI_CALC_TYPES,
             ])
             ->add('number', NumberType::class, [
-                'label'   => 'Write the number:',
+                'label'       => 'Write the number:',
+                'constraints' => [
+                    new Range([
+                        'max'        => FibonacciEnumType::MAX_INPUT_NUMBER,
+                        'maxMessage' => 'The number cannot exceed {{ limit }}',
+                    ]),
+                ],
             ])
             ->add('submit', SubmitType::class)
             ->addEventSubscriber(new FibonacciFormSubscriber())
