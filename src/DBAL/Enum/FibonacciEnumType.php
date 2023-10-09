@@ -4,6 +4,8 @@ namespace App\DBAL\Enum;
 
 enum FibonacciEnumType
 {
+    const MAX_INPUT_NUMBER = 44;
+
     const TYPE_REQUIRES_INPUT         = 1;
     const TYPE_DOES_NOT_REQUIRE_INPUT = 0;
 
