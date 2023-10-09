@@ -17,7 +17,7 @@ class FibonacciType extends AbstractType
         $builder
             ->add('calcType', ChoiceType::class, [
                 'label'   => 'Choose the calculating method:',
-                'choices' => array_keys(FibonacciEnumType::FIBONACCI_CALC_TYPES),
+                'choices' => FibonacciEnumType::FIBONACCI_CALC_TYPES,
             ])
             ->add('number', NumberType::class, [
                 'label'   => 'Write the number:',
