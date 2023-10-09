@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\DBAL\Enum\FibonacciEnumType;
-use App\Form\EventSubscriber\FibonacciFormSubscriber;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -30,7 +29,6 @@ class FibonacciType extends AbstractType
                 ],
             ])
             ->add('submit', SubmitType::class)
-            ->addEventSubscriber(new FibonacciFormSubscriber())
         ;
     }
 }
