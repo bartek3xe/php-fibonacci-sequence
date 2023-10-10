@@ -2,8 +2,8 @@
 
 namespace App\Tests\Service;
 
+use App\Service\FibonacciSequenceCalculator;
 use PHPUnit\Framework\TestCase;
-use App\Fibonacci\Service\FibonacciSequenceCalculator;
 
 class FibonacciSequenceCalculatorTest extends TestCase
 {

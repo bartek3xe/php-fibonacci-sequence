@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Fibonacci\Service;
+namespace App\Service;
 
 use App\DBAL\Enum\FibonacciEnumType;
 

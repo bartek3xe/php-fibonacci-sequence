@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App\DBAL\Enum\FibonacciEnumType;
-use App\Fibonacci\Service\FibonacciSequenceCalculator;
 use App\Form\FibonacciType;
+use App\Service\FibonacciSequenceCalculator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
