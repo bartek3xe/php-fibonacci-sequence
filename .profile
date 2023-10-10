@@ -9,3 +9,7 @@ stop() {
 pconsole() {
     php bin/console "$@"
 }
+
+punit() {
+    php bin/phpunit
+}
