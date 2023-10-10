@@ -21,12 +21,6 @@ class FibonacciType extends AbstractType
             ])
             ->add('number', NumberType::class, [
                 'label'       => 'Użyj własnej liczby',
-                'constraints' => [
-                    new Range([
-                        'max'        => FibonacciEnumType::MAX_INPUT_NUMBER,
-                        'maxMessage' => 'Liczba nie może być większa od {{ limit }}',
-                    ]),
-                ],
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Zatwiedź',
