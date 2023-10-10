@@ -23,7 +23,7 @@ class FibonacciType extends AbstractType
                 'label'       => 'Użyj własnej liczby',
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Zatwiedź',
+                'label' => 'Zatwierdź',
             ])
         ;
     }
