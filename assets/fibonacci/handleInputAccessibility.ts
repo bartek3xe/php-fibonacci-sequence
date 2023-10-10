@@ -6,5 +6,5 @@ export function handleInputAccessibility(
     const selectedOption: string = selectInput.options[selectInput.selectedIndex]?.textContent;
     const selectedValue = calcTypes[selectedOption];
 
-    numberInput.disabled = selectedValue === 0;
+    numberInput.disabled = selectedValue !== null;
 }

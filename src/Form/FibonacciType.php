@@ -16,19 +16,21 @@ class FibonacciType extends AbstractType
     {
         $builder
             ->add('calcType', ChoiceType::class, [
-                'label'   => 'Choose the calculating method:',
+                'label'   => 'Przelicz w oparciu o',
                 'choices' => FibonacciEnumType::FIBONACCI_CALC_TYPES,
             ])
             ->add('number', NumberType::class, [
-                'label'       => 'Write the number:',
+                'label'       => 'Użyj własnej liczby',
                 'constraints' => [
                     new Range([
                         'max'        => FibonacciEnumType::MAX_INPUT_NUMBER,
-                        'maxMessage' => 'The number cannot exceed {{ limit }}',
+                        'maxMessage' => 'Liczba nie może być większa od {{ limit }}',
                     ]),
                 ],
             ])
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label' => 'Zatwiedź',
+            ])
         ;
     }
 }
