@@ -5,17 +5,28 @@
 {% block body %}
     {{ form_start(form) }}
 
-    <div>
+    <h1>Fibonacci Sequence Calculator</h1>
+
+    <div id="dataCalcTypes" data-calc-types="{{ calcTypes|json_encode|e('html_attr') }}">
         {{ form_label(form.calcType) }}
-        {{ form_widget(form.calcType) }}
+        {{ form_widget(form.calcType, {
+            'id': 'calcType',
+        }) }}
     </div>
     <div>
         {{ form_label(form.number) }}
-        {{ form_widget(form.number) }}
+        {{ form_widget(form.number, {
+            'id': 'inputNumber',
+        }) }}
     </div>
 
     {{ form_widget(form.submit) }}
 
     {{ form_end(form) }}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('index_fibonacci') }}
+    {% endblock %}
+
 
 {% endblock %}
