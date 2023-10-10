@@ -6,9 +6,9 @@ enum FibonacciEnumType
 {
     const MAX_INPUT_NUMBER = 44;
 
-    const DAY_KEY   = "today's day";
-    const MONTH_KEY = "today's month";
-    const OWN_KEY   = "Own input value";
+    const DAY_KEY   = "dzisiejszy dzień";
+    const MONTH_KEY = "ten miesiąc";
+    const OWN_KEY   = "Własną wartość";
 
     const DAY_VALUE   = 'day';
     const MONTH_VALUE = 'month';
