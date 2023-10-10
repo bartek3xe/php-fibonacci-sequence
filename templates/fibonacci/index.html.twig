@@ -22,7 +22,13 @@
 
     {{ form_widget(form.submit) }}
 
+    {{ form_errors(form.number) }}
+
     {{ form_end(form) }}
+
+    {% if result is not null %}
+        <p>the sum of the sequence is {{ result }}</p>
+    {% endif %}
 
     {% block javascripts %}
         {{ encore_entry_script_tags('index_fibonacci') }}
