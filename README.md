@@ -5,11 +5,11 @@ This is a Symfony 6 application that calculates the Fibonacci sequence. Follow t
 
 ## Getting Started
 1. Clone the repository to your local machine using Git:
-   ```
-   git clone https://github.com/bartek3xe/php-fibonacci-sequence.git
-   ```
+  ```  
+  git clone https://github.com/bartek3xe/php-fibonacci-sequence.git
+  ```
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
   ```  
   cd php-fibonacci-sequence
   ```
