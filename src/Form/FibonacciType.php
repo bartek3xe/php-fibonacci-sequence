@@ -27,6 +27,10 @@ class FibonacciType extends AbstractType
                         'maxMessage' => 'Liczba nie może być większa od {{ limit }}',
                     ]),
                 ],
+                'attr'        => [
+                    'html5' => true,
+                    'type'  => 'number',
+                ],
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Zatwiedź',
